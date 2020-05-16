@@ -32,25 +32,25 @@ func n(_ num : Int,_ mode : Int = 1) -> String {
             func mulPor1 (num1: String, num2 : String) -> String {
                 let num = "0"+num1
                 var rest = 0
-                var resul = ""
-                var resulFinal = ""
+                var result = ""
+                var finalResult = ""
                 if num.count >= num2.count {
                     for x in num2.reversed() {
                         for y in num.reversed() {
-                            resul += String((Int(String(x))! * Int(String(y))!+rest) % 10)
+                            result += String((Int(String(x))! * Int(String(y))!+rest) % 10)
                             rest =  (Int(String(x))! * Int(String(y))!+rest) / 10
                         }
                     }
                 }
-                for i in resul.reversed(){
-                    resulFinal += String(i)
+                for i in result.reversed(){
+                    finalResult += String(i)
                 }
                 
                 
-                if resulFinal[String.Index(utf16Offset: 0, in: resulFinal)] == "0" {
-                    resulFinal.remove(at: resulFinal.startIndex)
+                if finalResult[String.Index(utf16Offset: 0, in: finalResult)] == "0" {
+                    finalResult.remove(at: finalResult.startIndex)
                 }
-                return resulFinal
+                return finalResult
             }
             var resultados : [String] = []
             for i in num2.reversed(){
@@ -67,8 +67,8 @@ func n(_ num : Int,_ mode : Int = 1) -> String {
                 let numm = "0"+num2
                 
                 var rest = 0
-                var resul = ""
-                var resulFinal = ""
+                var result = ""
+                var finalResult = ""
                 if num.count >= numm.count {
                     var n = num2
                     for _ in 1...(num.count-num2.count) {
@@ -77,18 +77,18 @@ func n(_ num : Int,_ mode : Int = 1) -> String {
                     for i in (0..<num.count).reversed(){
                         let n1 = Int(String(num[String.Index(utf16Offset: i, in: num)]))!
                         let n2 = Int(String(n[String.Index(utf16Offset: i, in: n)]))!
-                        resul += String((n1 + n2 + rest) % 10)
+                        result += String((n1 + n2 + rest) % 10)
                         rest = (n1 + n2 + rest) / 10
                     }
                     
                 }
-                for i in resul.reversed(){
-                    resulFinal += String(i)
+                for i in result.reversed(){
+                    finalResult += String(i)
                 }
-                if resulFinal[String.Index(utf16Offset: 0, in: resulFinal)] == "0" {
-                    resulFinal.remove(at: resulFinal.startIndex)
+                if finalResult[String.Index(utf16Offset: 0, in: finalResult)] == "0" {
+                    finalResult.remove(at: finalResult.startIndex)
                 }
-                return resulFinal
+                return finalResult
             }
             if num1.count > num2.count {
                 return mulPor1(num1: num1, num2: num2)

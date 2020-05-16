@@ -52,15 +52,15 @@ func n(_ num : Int,_ mode : Int = 1) -> String {
                 }
                 return finalResult
             }
-            var resultados : [String] = []
+            var listResults : [String] = []
             for i in num2.reversed(){
-                resultados.append(mulPor1(num1: num1, num2: String(i)))
+                listResults.append(mulPor1(num1: num1, num2: String(i)))
             }
-            return resultados
+            return listResults
         }
         
-        /// Sum of multiplication results
-        func sum(num1: String, num2 : String) -> String {
+        /// Join multiplication results. (result1 x1) + (result2 x 10) + (result3 x 100) + (result4 x 1000) + (...)
+        func join(num1: String, num2 : String) -> String {
             
             func mulPor1 (num1: String, num2 : String) -> String {
                 let num = "0"+num1
@@ -97,24 +97,24 @@ func n(_ num : Int,_ mode : Int = 1) -> String {
             }
         }
         
-        var o : [String] = []
+        var listWithResults : [String] = []
         if num1.count > num2.count {
-            o = mul(num1: num1, num2: num2)
+            listWithResults = mul(num1: num1, num2: num2)
         } else {
-            o = mul(num1: num2, num2: num1)
+            listWithResults = mul(num1: num2, num2: num1)
         }
         
 
-        var no = ""
-        var resultadoFor : [String] = []
-        for i in o {
-            resultadoFor.append(i + no)
-            no += "0"
+        var zerosToAdd = ""
+        var resultsWithZeros : [String] = []
+        for result in listWithResults {
+            resultsWithZeros.append(result + zerosToAdd)
+            zerosToAdd += "0"
             
         }
         var initi = "0"
-        for i in resultadoFor {
-            initi = sum(num1: i, num2: initi)
+        for i in resultsWithZeros {
+            initi = join(num1: i, num2: initi)
         }
 
         return initi

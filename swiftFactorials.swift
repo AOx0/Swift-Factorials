@@ -167,8 +167,10 @@ func n(_ num : Int,_ mode : Int = 1) -> String {
     func returnZero (_ num : Int, _ mode : Int = 1) -> String {
         if mode == 1 {
             return "n! 0 = 1"
-        } else {
+        } else if mode == 2 {
             return "n!! 0 = 1"
+        } else {
+            return "(n!)! 0 = 1"
         }
     }
     
@@ -190,5 +192,4 @@ func n(_ num : Int,_ mode : Int = 1) -> String {
     }
 }
 
-print(n(5)) // n! 5 = 120
-print(n(7)) // n! 7 = 5040
+print(n(1000,1)) // n! 7 = 5040

@@ -17,7 +17,9 @@ Bigger numbers than recommended can take much longer, as each factorial increase
 
 ### Time examples:
 
-n! 2700 = 5 mim
+n! 1000 = 17 seg
+
+n! 2700 = 5 min
 
 n! 3000 = 7 min
 

@@ -7,7 +7,7 @@ This proyect divides in two:
 
 # Swift-Factorials
 
-This is a swift function that calculates:
+[This](https://github.com/AOx0/Swift-Factorials/blob/master/swiftFactorials.swift) is a swift function that calculates:
 
 - Factorials [ **n!** ]
 - Semi-factorials [ **n!!** ]
@@ -63,7 +63,9 @@ n(3,3) // (n!)! 3 = 720
 
 # Command Line Tool
 
-The function is available as a simple command line tool. 
+The function is available as a [simple command line tool](https://github.com/AOx0/Swift-Factorials/tree/master/Command%20Line%20Proyect). 
+
+The program is available for downloading [here](https://github.com/AOx0/Swift-Factorials/releases/tag/v1.0.0).
 
 <u>Features:</u>
 

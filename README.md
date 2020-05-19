@@ -1,7 +1,7 @@
 This proyect divides in two:
 
-- Swift Function
-- [Command Line Tool](https://github.com/AOx0/Swift-Factorials#command-line-tool)
+- [Swift main function](https://github.com/AOx0/Swift-Factorials#swift-factorials)
+- [Command line tool made with the function](https://github.com/AOx0/Swift-Factorials#command-line-tool)
 
 
 
@@ -130,3 +130,12 @@ some@Mac ~ %
 ```
 
 You can always use `exit` to terminate de program.
+
+
+
+# Features to add
+
+List of updates for both, the command line tool and the function.
+
+- *Checkpoints* where to start to callculate x thing. There's need to start from 0 every time.
+- ...

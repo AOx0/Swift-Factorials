@@ -137,5 +137,5 @@ You can always use `exit` to terminate de program.
 
 List of updates for both, the command line tool and the function.
 
-- *Checkpoints* where to start to callculate x thing. There's need to start from 0 every time.
+- *Checkpoints* where to start to callculate x thing. There's no need to start from 0 every time.
 - ...

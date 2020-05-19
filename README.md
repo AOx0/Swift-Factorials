@@ -1,5 +1,13 @@
+This proyect divides in two:
+
+- Swift Function
+- [Command Line Tool](https://github.com/AOx0/Swift-Factorials#command-line-tool)
+
+
+
 # Swift-Factorials
-This swift function calculates:
+
+This is a swift function that calculates:
 
 - Factorials [ **n!** ]
 - Semi-factorials [ **n!!** ]
@@ -7,27 +15,25 @@ This swift function calculates:
 
 This function allows to obtain infinite numbers due to a function that performs multiplications using and returning Strings.
 
-Recommended Max number per function:
 
-- Factorial:								2700 (5 min long)
-- Semi-factorial:					   6000 (5.5 min long)
-- Twice iterated factorial:		 6 (2.5 min long)
 
-Bigger numbers than recommended can take much longer, as each factorial increases exponentially, the time to calculate the next factorial increases exponentially as well.
+As each factorial increases exponentially, the time to calculate the next factorial increases exponentially as well.
 
-### Time examples:
+## Time examples:
 
-n! 1000 = 17 seg
+n! 1000 = 0.1 min
 
-n! 2700 = 5 min
+n! 2700 = 5.0 min
 
-n! 3000 = 7 min
+n! 3000 = 7.0 min
 
-n! 4000 = 16 min
+n! 4000 = 1.6 min
 
-n! 5000 = 28 min
+n! 5000 = 2.8 min
 
-n! 6000 = 45 min
+n! 6000 = 4.5 min
+
+
 
 ## How to use?
 
@@ -55,3 +61,72 @@ n(3,2) // n!! 3 = 3
 n(3,3) // (n!)! 3 = 720
 ```
 
+# Command Line Tool
+
+The function is available as a simple command line tool. 
+
+<u>Features:</u>
+
+   - **n!** : Calculates *Factorials*
+   - **n!!** : Calculates *Semi-factorials*
+   - **(n!)!** : Calculates *Twice iterated factorials*
+   - Simple user interface
+   - Command line arguments
+
+macOS 10.9 or higher required
+
+## Command Line Arguments
+
+The tool can receive arguments when executing it, avoiding to enter the full interface. Arguments passed in this way are different from those used inside the program.
+
+```
+nl == n!
+
+nll == n!!
+
+nll == (n!)!
+```
+
+Example:
+
+```
+some@Mac ~ % swiftFactorials nl 6
+n! 6 = 720
+some@Mac ~ % swiftFactorials nll 6
+n!! 6 = 48
+some@Mac ~ % swiftFactorials nlll 3
+(n!)! 3 = 720
+```
+
+## Commands In-App
+
+The program has a simple interface where unlimited calculations can be made. As mentioned before, arguments from command line execution and arguments inside the program are different.
+
+ **n!** : Factorial
+
+ **n!!** : Semi-Factorial
+
+ **(n!)!** : Twice iterated factorial 
+
+Example:
+
+```
+some@Mac ~ % swiftFactorials
+Factorial Calculator v1.0.0 - AOx0
+ n!    :      Factorial
+ n!!   :      Semi-Factorial
+ (n!)! :      Twice iterated factorial 
+ usage: [exit] <mode> <number>
+        example: n!! 982
+
+>>>  n! 6
+n! 6 = 720
+>>>  n!! 6
+n!! 6 = 48
+>>>  (n!)! 3
+(n!)! 3 = 720
+>>> exit
+some@Mac ~ %
+```
+
+You can always use `exit` to terminate de program.

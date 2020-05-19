@@ -192,4 +192,4 @@ func n(_ num : Int,_ mode : Int = 1) -> String {
     }
 }
 
-print(n(1000,1)) // n! 7 = 5040
+print(n(7)) // n! 7 = 5040
